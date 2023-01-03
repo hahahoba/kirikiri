@@ -13,10 +13,20 @@ public interface UserMapper {
 
     // 유저 정보 조회
     public UserVO selectUser(String userId);
+    public UserVO selectByNickname(String userNickname);
 
     // 유저 정보 업데이트
     public void updateUser(UserVO userVO);
 
     public void deleteUser(String userId);
+
+    // Email로 데이터 조회
+    public UserVO selectUserEmail(String userEmail);
+
+    // Id로 데이터 조회
+    public UserVO selectUserId(String userId);
+
+    // 비밀번호 재설정
+    public void updatePw(UserVO userVO);
 
 }
